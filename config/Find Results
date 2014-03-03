@@ -1,0 +1,10 @@
+Searching 204 files for "after_sign"
+
+/Users/DPL-1/Desktop/Aaron_Project/Tweeter/app/controllers/application_controller.rb:
+    8    end
+    9  
+   10:   def after_sign_in_path_for(resource)
+   11     user_path
+   12    end
+
+1 match in 1 file

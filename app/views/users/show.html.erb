@@ -1,0 +1,21 @@
+<div class='span3'>
+  <div class="well sidebar-nav">
+    <%= form_for(@tweet) do |f| %>
+      <%= f.text_field :content %><br />
+      <%= f.submit :tweet %>
+    <% end %>
+  </div><!--/.well -->
+</div>
+<div class="well sidebar-nav span6 offset2  ">
+  <%= @user.name %>
+  <%= @user.handle %>
+  <%= @user.email%>
+  <%= @user.age %><br />
+
+<section>
+  <% @user.tweets.each do |tweet| %>
+    <%= tweet.content %>
+  <% end %>
+</section>
+
+</div><!--/.well -->
