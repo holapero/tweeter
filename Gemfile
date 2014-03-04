@@ -34,20 +34,20 @@ group :doc do
   gem 'sdoc', require: false
 end
 
-group :development do 
+group :development do
   gem "better_errors", "~> 1.1.0"
   gem "ffaker", "~> 1.23.0"
   gem 'binding_of_caller'
-end 
+  gem "letter_opener"
+end
 
-group :production do 
+group :production do
   gem "rails_12factor"
-  
-end 
- 
- 
-  
-  
- 
-  
-  
+
+end
+
+
+
+
+
+
