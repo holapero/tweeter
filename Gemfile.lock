@@ -149,7 +149,7 @@ DEPENDENCIES
   better_errors (~> 1.1.0)
   binding_of_caller
   coffee-rails (~> 4.0.0)
-  devise (~> 3.2.3)
+  devise
   ffaker (~> 1.23.0)
   jbuilder (~> 1.2)
   jquery-rails

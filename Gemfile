@@ -25,7 +25,7 @@ gem 'turbolinks'
 
 # Build JSON APIs with ease. Read more: https://github.com/rails/jbuilder
 gem 'jbuilder', '~> 1.2'
-gem "devise", "~> 3.2.3"
+gem "devise"
 gem "kaminari", "~> 0.15.1"
 gem "twitter-bootstrap-rails", "~> 2.2.8"
 
@@ -43,7 +43,6 @@ end
 
 group :production do
   gem "rails_12factor"
-
 end
 
 
