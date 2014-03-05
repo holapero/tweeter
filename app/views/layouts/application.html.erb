@@ -32,7 +32,11 @@
     <div class="navbar navbar-fluid-top">
       <div class="navbar-inner">
         <div class="container-fluid">
-          <a class="brand" href="/">Tweeter</a>
+          <% if user_signed_in? %>
+            <li class="brand"><%= link_to("Tweeter", user_path(@user.id))%></li>
+           <% else %>
+            <a class="brand" href="/">Tweeter</a>
+          <% end %>
            <div class="container-fluid nav-collapse">
             <ul class="nav">
               <% if user_signed_in? %>
