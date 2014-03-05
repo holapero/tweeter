@@ -7,6 +7,7 @@ class CreateProfiles < ActiveRecord::Migration
       t.string :location
       t.string :website
       t.text :bio
+      t.belongs_to :user
 
       t.timestamps
     end
