@@ -9,5 +9,10 @@ class StaticPagesController < ApplicationController
   end
   def privacy
   end
+   def newsletter
+    UserMailer.newsletter(params).deliver
+    redirect_to root_path
+    flash[:notice] = "Thanks for signing up"
+  end
 end
 

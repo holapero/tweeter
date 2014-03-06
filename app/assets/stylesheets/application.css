@@ -17,5 +17,13 @@ body {
 background-image: -webkit-gradient(radial, center center, 0, center center, 1000, color-stop(0, #FFFFFF), color-stop(1, #55ACEE));
 }
 
+.navbar.right .navbar-inner {
+    text-align: right;
+}
+
+.navbar.right .navbar-inner .nav {
+    display:inline-block;
+    float: none;
+}
 
 

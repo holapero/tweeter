@@ -6,4 +6,8 @@ class UserMailer < ActionMailer::Base
     @user = user
     mail(to: @user.email)
   end
+  def newsletter(params)
+    @params = params
+    mail(to: @params[:email])
+  end
 end

@@ -27,45 +27,23 @@
     <!-- Size should be 32 x 32 pixels -->
     <%= favicon_link_tag 'favicon.ico', :rel => 'shortcut icon' %>
     <%= javascript_include_tag "application" %>
-    <script>
-      $('document').ready(function() {$('#myModal').modal('show');});
-    </script>
   </head>
   <body>
-    <div class="navbar right navbar-fluid-top">
+    <div class="navbar navbar-fluid-top">
       <div class="navbar-inner">
         <div class="container-fluid">
-          <% if user_signed_in? %>
-            <li id="home" class="brand"><%= link_to("Tweeter",user_path(@user.id))%></li>
-           <% else %>
-            <a class="brand" href="/">Tweeter</a>
-          <% end %>
-           <div class="container-fluid nav-collapse">
-            <ul class="nav">
-              <% if user_signed_in? %>
-                <li><%= link_to("My Account", edit_user_registration_path)%></li>
-                <li><%= link_to("Logout", destroy_user_session_path, method: :delete)%></li>
-              <% end %>
-            </ul>
-          </div>
+          <a class="brand" href="/"><i class="icon-home"></i></a>
+          </div> <!--/.nav-collapse -->
+        </div>
       </div>
     </div>
-    <%= yield %>
-    <div class="span8">
-      <%= bootstrap_flash %>
-    </div>
+    <div class="container-fluid pull-right">
+      <div class='row-fluid'>
+        <div class="span9">
+          <%= bootstrap_flash %>
+        </div>
+      </div>
+    </div> <!-- /container -->
+       <%= yield %>
   </body>
 </html>
-
-
-<ul>
-    <li class="dropdown">
-        <a href="#" class="dropdown-toggle" data-toggle="dropdown"><span class="glyphicon glyphicon-cog"></span></a>
-        <ul class="dropdown-menu">
-            <li><i class="icon-arrow-up"></i><a href="#">Up</a></li>
-            <li><i class="icon-arrow-down"></i><a href="#">Down</a></li>
-            <li><i class="icon-arrow-left"></i><a href="#">Left</a></li>
-            <li><i class="icon-arrow-right"></i><a href="#">Right</a></li>
-        </ul>
-    </li>
-</ul>
